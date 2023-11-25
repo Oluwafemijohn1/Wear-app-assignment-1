@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.example.lateefassignment1.presentation.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/start_button"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/enable_radius_button_bg"
+                android:text="@string/start"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/stop_button"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8dp"
+                android:background="@drawable/disabled_radius_button"
+                android:text="@string/stop"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="@+id/start_button"
+                app:layout_constraintStart_toStartOf="@+id/start_button"
+                app:layout_constraintTop_toBottomOf="@+id/start_button" />
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_below="@id/start_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8dp"
+                android:background="@drawable/disabled_radius_button"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="@+id/stop_button"
+                app:layout_constraintStart_toStartOf="@+id/stop_button"
+                app:layout_constraintTop_toBottomOf="@+id/stop_button" />
+
+            <TextView
+                android:id="@+id/stopwatchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_8dp"
+                android:text="@string/initial_time"
+                android:textSize="@dimen/_18sp"
+                android:textColor="@color/shadow_color"
+                app:layout_constraintEnd_toEndOf="@+id/reset_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/reset_button"
+                app:layout_constraintTop_toBottomOf="@+id/reset_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
